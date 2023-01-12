@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:models="clr-namespace:Attendances.Models"
+             x:Class="Attendances.Views.Templates.Lesson_Template"
+             x:DataType="models:Classes">
+    <Grid>
+        <Frame Margin="10" HeightRequest="120">
+            <Grid>
+                <Label Text="{Binding Description}"
+                       FontAttributes="Bold"  FontSize="20"/>
+                <StackLayout Grid.Row="1">
+                    <Label Text="{Binding Today}"/>
+                    <Label Text="{Binding StartOn,StringFormat='Starts : {0}'}"/>
+                    <Label Text="{Binding EndOn,StringFormat='Ends : {0}'}"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+        <Button BackgroundColor="Transparent"
+                Clicked="Button_Clicked"/>
+    </Grid>
+</ContentView>

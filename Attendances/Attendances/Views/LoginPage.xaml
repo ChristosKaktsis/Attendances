@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Attendances.Views.LoginPage"
+             Shell.PresentationMode="Modal"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Frame">
+                <Setter Property="Padding" Value="10,2"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Frame VerticalOptions="Center" Padding="15"
+               HasShadow="False" BorderColor="Transparent">
+            <StackLayout Spacing="25">
+                <Frame>
+                    <Entry Placeholder="Username"/>
+                </Frame>
+                <Frame>
+                    <Entry Placeholder="Password"/>
+                </Frame>
+                <Button Text="Login"
+                        Command="{Binding LoginCommand}"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
